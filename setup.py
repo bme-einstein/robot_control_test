@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'pub_traj_py'
+package_name = 'robot_control_test'
 
 setup(
     name=package_name,
@@ -20,10 +20,11 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'Traj=pub_traj_py.2points:main',
-            'C_Pose=pub_traj_py.Subscriber:main',
-            'control_offset=pub_traj_py.pu_and_sub:main',
-            'motion=pub_traj_py.motion_plannig:main',
+            'Traj=robot_control_test.2points:main',
+            'C_Pose=robot_control_test.Subscriber:main',
+            'control_offset=robot_control_test.pu_and_sub:main',
+            'motion=robot_control_test.motion_plannig:main',
+            'joint_controller=robot_control_test.test_joint_traj:main',
         ],
     },
 )
